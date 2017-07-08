@@ -1,0 +1,69 @@
+[gd_resource type="Animation" format=1]
+
+[resource]
+
+resource/name = "Walk"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LeftLeg:transform/rot")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 21.5502, 1.77898 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RightLeg:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -13.111, -22.1238, -5.11953 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Tail:transform/rot")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -29.0016, -13.6086, -29.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LeftArm:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 20.8367, 52.8936, 20.8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RightArm:transform/rot")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -13.2582, -30.4543, -13.3 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Head:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 10.464, 19.7404, 10.5 ]
+}
+

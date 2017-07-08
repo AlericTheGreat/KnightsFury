@@ -1,0 +1,264 @@
+[gd_scene load_steps=16 format=1]
+
+[ext_resource path="res://Animations/beaver.tres" type="Animation" id=1]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_tail.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_leg.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_arm.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Monsters/Beaver/club.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_body.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_ear.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_head.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_lowerjaw.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_upperjaw.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_eye.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Monsters/Beaver/beaver_eyebrow.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Monsters/Beaver/crown.png" type="Texture" id=13]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "Idle"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Tail:transform/rot")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 20.7738, -92.7082, 20.8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Head/Skull/UpperJaw:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -2.69311, -36.8372, -2.7 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Head/LeftEar:transform/scale")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1.12812 ), Vector2( 1, 1.51617 ), Vector2( 1, 1.20291 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "Walk"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LeftLeg:transform/rot")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 21.5502, 1.77898 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RightLeg:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -13.111, -22.1238, -5.11953 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Tail:transform/rot")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -29.0016, -13.6086, -29.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LeftArm:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 20.8367, 52.8936, 20.8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RightArm:transform/rot")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -13.2582, -30.4543, -13.3 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Head:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 10.464, 19.7404, 10.5 ]
+}
+
+[node name="Beaver" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/Attack = ExtResource( 1 )
+anims/Idle = SubResource( 1 )
+anims/Walk = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "Walk"
+
+[node name="Tail" type="Sprite" parent="."]
+
+transform/pos = Vector2( 154.538, 285.658 )
+transform/rot = -26.6928
+texture = ExtResource( 2 )
+offset = Vector2( 130.626, -189.829 )
+
+[node name="RightLeg" type="Sprite" parent="."]
+
+transform/pos = Vector2( -12.5963, 231.128 )
+transform/rot = -14.4628
+texture = ExtResource( 3 )
+offset = Vector2( -37.5075, 135.077 )
+
+[node name="RightArm" type="Sprite" parent="."]
+
+transform/pos = Vector2( -40.9341, -124.392 )
+transform/rot = -15.8374
+texture = ExtResource( 4 )
+offset = Vector2( -33.7141, 145.745 )
+
+[node name="club" type="Sprite" parent="RightArm"]
+
+transform/pos = Vector2( -11.3009, 309.802 )
+transform/rot = 62.1151
+transform/scale = Vector2( 0.549259, 0.549259 )
+texture = ExtResource( 5 )
+offset = Vector2( -5.89902, -361.447 )
+
+[node name="Body" type="Sprite" parent="."]
+
+transform/pos = Vector2( 68.1992, -266.456 )
+texture = ExtResource( 6 )
+offset = Vector2( -6.51483, 298.774 )
+
+[node name="LeftLeg" type="Sprite" parent="."]
+
+transform/pos = Vector2( 113.528, 271.823 )
+transform/rot = 3.23232
+texture = ExtResource( 3 )
+offset = Vector2( -36.1178, 143.844 )
+
+[node name="LeftArm" type="Sprite" parent="."]
+
+transform/pos = Vector2( 107.6, -96.6991 )
+transform/rot = 25.6449
+texture = ExtResource( 4 )
+offset = Vector2( -26.7845, 128.796 )
+
+[node name="Head" type="Sprite" parent="."]
+
+transform/pos = Vector2( 39.1999, -219.912 )
+transform/rot = 11.8554
+offset = Vector2( -8.51526, 192.017 )
+
+[node name="RightEar" type="Sprite" parent="Head"]
+
+transform/pos = Vector2( -58.877, -294.622 )
+transform/rot = 16.9231
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 7 )
+offset = Vector2( 0.88916, -31.3431 )
+
+[node name="Skull" type="Sprite" parent="Head"]
+
+transform/pos = Vector2( 14.0004, -3.51794 )
+transform/rot = 1.97577
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+offset = Vector2( -13.0889, -149.311 )
+
+[node name="LowerJaw" type="Sprite" parent="Head/Skull"]
+
+transform/pos = Vector2( -43.0144, -65.3563 )
+transform/rot = -11.2828
+transform/scale = Vector2( 0.706901, 0.841385 )
+texture = ExtResource( 9 )
+offset = Vector2( -68.8605, 5.94519 )
+
+[node name="UpperJaw" type="Sprite" parent="Head/Skull"]
+
+transform/pos = Vector2( -53.3986, -76.7832 )
+transform/rot = -17.6777
+texture = ExtResource( 10 )
+offset = Vector2( -64.3384, 11.9745 )
+
+[node name="RightEye" type="Sprite" parent="Head/Skull"]
+
+transform/pos = Vector2( -268.265, -37.4191 )
+transform/rot = -13.9092
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
+offset = Vector2( 130.626, -189.829 )
+
+[node name="eyebrow" type="Sprite" parent="Head/Skull/RightEye"]
+
+transform/pos = Vector2( 118.05, -234.78 )
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="LeftEye" type="Sprite" parent="Head/Skull"]
+
+transform/pos = Vector2( -182.669, -12.2438 )
+transform/rot = -13.9092
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
+offset = Vector2( 130.626, -189.829 )
+
+[node name="eyebrow" type="Sprite" parent="Head/Skull/LeftEye"]
+
+transform/pos = Vector2( 118.654, -232.337 )
+texture = ExtResource( 12 )
+
+[node name="crown" type="Sprite" parent="Head"]
+
+transform/pos = Vector2( 54.0628, -337.872 )
+transform/rot = -13.6089
+transform/scale = Vector2( 0.395083, 0.533744 )
+texture = ExtResource( 13 )
+
+[node name="LeftEar" type="Sprite" parent="Head"]
+
+transform/pos = Vector2( 107.426, -247.056 )
+transform/rot = -55.5895
+transform/scale = Vector2( 1, 1.34035 )
+texture = ExtResource( 7 )
+offset = Vector2( 0.88916, -31.3431 )
+
+
