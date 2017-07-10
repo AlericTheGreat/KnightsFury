@@ -1,0 +1,81 @@
+[gd_resource type="Animation" load_steps=2 format=1]
+
+[ext_resource path="res://Assets/Player/PlayerSprites/Player_shield_back.png" type="Texture" id=1]
+
+[resource]
+
+resource/name = "Block"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_shield:texture")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player_shield:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ -86.3213, -2.29819 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player_shield/Left_Arm:transform/scale")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.00599, 1.62959 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player_shield/Player_shield_front:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Right_Leg:transform/rot")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.84157, -52.533 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Left_Leg:transform/scale")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.992894 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Left_Leg:transform/rot")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 13.8171 ]
+}
+
